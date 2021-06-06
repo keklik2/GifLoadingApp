@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButtonLatest"
+                android:checked="true"
+                android:layout_margin="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="changeChapter"
+                android:text="@string/button_latest" />
+
+            <RadioButton
+                android:id="@+id/radioButtonHot"
+                android:layout_margin="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="changeChapter"
+                android:text="@string/button_hot" />
+
+            <RadioButton
+                android:id="@+id/radioButtonTop"
+                android:layout_margin="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="changeChapter"
+                android:text="@string/button_top" />
+        </RadioGroup>
+
+        <androidx.cardview.widget.CardView
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageViewGif"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/image_view_gif_description"
+                app:srcCompat="@android:drawable/ic_popup_sync" />
+
+            <TextView
+                android:id="@+id/textViewDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:textColor="@color/white"
+                android:textSize="7pt"
+                android:paddingVertical="3dp"
+                android:paddingHorizontal="8dp"
+                android:background="@drawable/gradient"
+                android:text="@string/text_view_description_description" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButtonShowPreviousGif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:onClick="getPreviousGif"
+                app:srcCompat="@android:drawable/ic_menu_revert"
+                android:contentDescription="@string/button_show_previous_gif_description" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButtonShowNextGif"
+                android:layout_margin="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="getNextGif"
+                app:srcCompat="@android:drawable/ic_media_play"
+                android:contentDescription="@string/button_show_next_gif_description" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

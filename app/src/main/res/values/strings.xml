@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">App For Tinkoff</string>
+    <string name="button_latest">Последние</string>
+    <string name="button_hot">Горячие</string>
+    <string name="button_top">Лучшие</string>
+    <string name="image_view_gif_description">Контейнер для gif-изображений</string>
+    <string name="button_show_previous_gif_description">Кнопка возврата к предыдущей gif-анимации</string>
+    <string name="button_show_next_gif_description">Кнопка для отображения следующей gif-анимации этой категории</string>
+    <string name="text_view_description_description">Название загруженной gif-анимации</string>
+</resources>
